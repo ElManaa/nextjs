@@ -1,0 +1,197 @@
+.html {
+  font-size: 16px !important;
+
+  /* Paragraphs */
+  p {
+    font-size: 1rem; // 16px
+    line-height: 1.5;
+  }
+
+  /* Titles */
+  h1 {
+    font-size: 2.5rem; // 40px
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2rem; // 32px
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.75rem; // 28px
+    line-height: 1.2;
+  }
+
+  /* Subtitles */
+  h4 {
+    font-size: 1.5rem; // 24px
+    line-height: 1.2;
+  }
+
+  h5 {
+    font-size: 1.25rem; // 20px
+    line-height: 1.2;
+  }
+
+  h6 {
+    font-size: 1rem; // 16px
+    line-height: 1.2;
+  }
+
+  /* Other */
+  .small-text {
+    font-size: 0.875rem; // 14px
+  }
+
+  .large-text {
+    font-size: 1.25rem; // 20px
+  }
+
+  /* Responsive Sizes */
+  @media screen and (max-width: 767px) {
+    /* Paragraphs */
+    p {
+      font-size: 0.875rem; // 14px
+    }
+
+    /* Titles */
+    h1 {
+      font-size: 2rem; // 32px
+    }
+
+    h2 {
+      font-size: 1.75rem; // 28px
+    }
+
+    h3 {
+      font-size: 1.5rem; // 24px
+    }
+
+    /* Subtitles */
+    h4 {
+      font-size: 1.25rem; // 20px
+    }
+
+    h5 {
+      font-size: 1.125rem; // 18px
+    }
+
+    h6 {
+      font-size: 1rem; // 16px
+    }
+
+    /* Other */
+    .small-text {
+      font-size: 0.75rem; // 12px
+    }
+
+    .large-text {
+      font-size: 1.125rem; // 18px
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Paragraphs */
+    p {
+      font-size: 0.9375rem; // 15px
+    }
+
+    /* Titles */
+    h1 {
+      font-size: 3rem; // 48px
+    }
+
+    h2 {
+      font-size: 2.25rem; // 36px
+    }
+
+    h3 {
+      font-size: 1.875rem; // 30px
+    }
+
+    /* Subtitles */
+    h4 {
+      font-size: 1.5rem; // 24px
+    }
+
+    h5 {
+      font-size: 1.25rem; // 20px
+    }
+
+    h6 {
+      font-size: 1.125rem; // 18px
+    }
+
+    /* Other */
+    .small-text {
+      font-size: 0.8125rem; // 13px
+    }
+
+    .large-text {
+      font-size: 1.375rem; // 22px
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    /* Paragraphs */
+    p {
+      font-size: 1rem; /* 16px */
+    }
+
+    /* Titles */
+    h1 {
+      font-size: 2.5rem; /* 40px */
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2rem; /* 32px */
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.75rem; /* 28px */
+      line-height: 1.2;
+    }
+
+    /* Subtitles */
+    h4 {
+      font-size: 1.5rem; /* 24px */
+      line-height: 1.2;
+    }
+
+    h5 {
+      font-size: 1.25rem; /* 20px */
+      line-height: 1.2;
+    }
+
+    h6 {
+      font-size: 1rem; /* 16px */
+      line-height: 1.2;
+    }
+
+    /* Small Text */
+    .small-text {
+      font-size: 0.875rem; /* 14px */
+    }
+
+    /* Large Text */
+    .large-text {
+      font-size: 1.25rem; /* 20px */
+    }
+  }
+}
+
+$small-font-size: 14px;
+$base-font-size: 16px;
+$large-font-size: 18px;
+@media screen and (min-width: 768px) {
+  $small-font-size: 16px;
+  $base-font-size: 18px;
+  $large-font-size: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  $small-font-size: 14px;
+  $base-font-size: 18px;
+  $large-font-size: 24px;
+}

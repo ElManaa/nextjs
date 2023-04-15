@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "@/styles/IconButton.module.scss";
-import { IButton, ISizeClass } from "@/app/types/Button";
+import { IButton, ISizeClass } from "@/app/types/IconButton";
 
 /**
  * Defines The size of the Icon and the Size of the Button

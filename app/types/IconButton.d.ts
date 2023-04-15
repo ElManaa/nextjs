@@ -2,9 +2,9 @@ import { SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 interface IButton {
     variation: string;
-    icon: any;
+    icon: IconProp;
     clickAction: any;
-    classes: string;
+    classes: string | false;
     size: SizeProp;
 }
 

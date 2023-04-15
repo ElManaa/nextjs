@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { Inter } from "next/font/google"; 
 
-import 'bootstrap/dist/css/bootstrap.css'
+import "@/styles/bootstrap.scss"
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@/styles/globals.scss";
 
@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <style jsx global>{`
         html {
-          font-family: ${inter.style.fontFamily};
+          font-family: ${inter.style.fontFamily} !important;
         }
       `}</style>
       <Component {...pageProps} />
