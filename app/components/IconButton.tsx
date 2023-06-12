@@ -21,8 +21,8 @@ const getSizeClass = (size: any): ISizeClass => {
 
 /**
  * Icon Button, Can be an Icon and a Button with Icon
- * @param param0 
- * @returns 
+ * @param param0
+ * @returns
  */
 function IconButton({ variation, icon, clickAction, classes, size }: IButton) {
   const { sizeClass, sizeIcon } = getSizeClass(size);
@@ -53,7 +53,7 @@ IconButton.defaultProps = {
   classes: false,
   size: "normal",
   icon: "fa-ellipsis-v",
-  clickAction : () => {}
+  clickAction: () => {},
 };
 
 export default IconButton;

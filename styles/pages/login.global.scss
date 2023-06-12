@@ -1,0 +1,16 @@
+.container {
+    background-image: url("../../public/bg-blue.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .body {
+      width: 80%; 
+    }
+    .footer {
+      text-align: center;
+    }
+     
+}
+  

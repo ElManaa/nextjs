@@ -2,13 +2,17 @@
 
 .inputSection {
     padding: 15px 10px;
-  
+
+    display: flex;
+    flex-direction: column;
+
     label { 
+      font-size: 0.8rem;
+      padding: 0px 3px;
       margin-bottom: 7px; 
       span {
         font-size: 15px;
-        color: $secondary;
-        margin-left : 2px;
+        color: $secondary; 
       }
     }
   
@@ -16,8 +20,9 @@
         font-family:$base-font-size ;
         color : $black; 
         font-size: $base-font-size;
-        width: 100%;
-        padding: 9px 30px;
+        display: flex;
+        flex : 1 ;
+        padding: 9px 12px;
         margin-bottom: 10px;
         border: 1.53407px solid rgba(0, 0, 0, 0.1);
         border-radius: 15.3407px;

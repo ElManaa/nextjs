@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import React, { ChangeEvent, FocusEvent, useState } from "react";
-import styles from "@/styles/InputText.module.scss";
+import styles from "@/styles/components/InputText.module.scss";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 
@@ -8,6 +8,7 @@ interface IProps {
     label : string;
     id : string;
     icon?: IconProp;
+    type: string;
     name : string;
     placeholder: string;
     isRequired: boolean;
@@ -17,7 +18,7 @@ interface IProps {
     formError: React.Dispatch<boolean> 
 }
 
-function InputText({ label, id, name, icon, placeholder, isRequired , validator , value , setValue, formError } : IProps) {
+function InputText({ label, id, name, icon, type, placeholder, isRequired , validator , value , setValue, formError } : IProps) {
 
   const [inputValue,setInputValue] = useState(value[name])
   const [isValid, setIsValid] = useState(false);
@@ -56,7 +57,7 @@ function InputText({ label, id, name, icon, placeholder, isRequired , validator 
       <input
         id={id}
         className={`${styles.textField} ${isValid && styles.valid} ${errorMessage && styles.error}`}
-        type="text"
+        type={type}
         name={name}
         value={inputValue}
         placeholder={placeholder}
@@ -79,6 +80,7 @@ function InputText({ label, id, name, icon, placeholder, isRequired , validator 
  
 InputText.defaultProps = {
   label: "LABEL",  
+  type: "text",
   value: "",  
   placeholder: "Placeholder",
   isRequired: false,

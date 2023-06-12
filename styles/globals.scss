@@ -6,7 +6,8 @@ $secondary: #f22aae;
 $green: #1dd01d;
 $white: #ffffff;
 $grey: #f3f3fb;
-$light-grey: #e6ecfe;
+$grey-light: #e6ecfe;
+$grey-dark: #7b7a7a;
 $black: #1e1f26;
 
 /** Template Spacing **/
@@ -15,6 +16,5 @@ $gutter-y: 1.5rem;
 
 .body {
   width: 100%; 
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto; 
 }
