@@ -1,0 +1,32 @@
+@import "../../../styles/globals.scss";
+@import "../../../styles/pages/login.global.scss";
+
+.container {
+  @extend .container;
+}
+
+.veriffooter {
+  width: 85%;
+}
+
+.subcontent {
+  @extend .footer;
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.body {
+ 
+    max-height: 75%;
+    overflow: auto;
+ 
+    .inputSection {
+      margin: 10px auto;
+    }
+}

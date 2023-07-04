@@ -1,12 +1,20 @@
 import { ReactNode, useState } from "react";
 import CardPage from "@/app/components/CardPage";
 import Button from "@/app/components/Button";
-import styles from "./login.module.scss";
+import styles from "./signup.module.scss";
 import Link from "next/link";
 import InputText from "@/app/components/InputText";
 
-function login() {
+function signup() {
   const usernameValidator = async (value: any) => {
+    return { valid: true, message: "" };
+  };
+
+  const emailValidator = async (value: any) => {
+    return { valid: true, message: "" };
+  };
+
+  const confirmPasswordValidator = async (value: any) => {
     return { valid: true, message: "" };
   };
 
@@ -24,14 +32,25 @@ function login() {
     return (
       <div className={styles.body}>
         <InputText
-          id="email"
-          name="email"
-          label="Enter Your Email"
+          id="username"
+          name="username"
+          label="Username"
           validator={usernameValidator}
           value={formData}
           setValue={setFormData}
           formError={setError}
-          placeholder="Email Address"
+          placeholder="Create Your Username"
+          isRequired={true}
+        />
+        <InputText
+          id="email"
+          name="email"
+          label="email"
+          validator={emailValidator}
+          value={formData}
+          setValue={setFormData}
+          formError={setError}
+          placeholder="Enter Your Email"
           isRequired={true}
         />
 
@@ -46,10 +65,22 @@ function login() {
           placeholder="Password"
           type="password"
           isRequired={true}
-        /> 
+        />
 
-        <Button label="Log in" variation="primary" ></Button>
-        
+        <InputText
+          id="confirmpassword"
+          name="confirmpassword"
+          label="Confirm Your Password"
+          validator={confirmPasswordValidator}
+          value={formData}
+          setValue={setFormData}
+          formError={setError}
+          placeholder="Password"
+          type="password"
+          isRequired={true}
+        />
+
+        <Button label="Log in" variation="primary"></Button>
       </div>
     );
   };
@@ -58,7 +89,7 @@ function login() {
     return (
       <div className={styles.footer}>
         <p>
-          I dont have an account. <Link href="/signup">Sign up</Link>
+          Already have an account. <Link href="/login">Log in</Link>
         </p>
       </div>
     );
@@ -67,7 +98,7 @@ function login() {
   return (
     <div className={styles.container}>
       <CardPage
-        title="Log in"
+        title="Sign up"
         subTitle="Enter your details to continue"
         renderBody={renderBody}
         renderFooter={renderFooter}
@@ -76,4 +107,4 @@ function login() {
   );
 }
 
-export default login;
+export default signup;

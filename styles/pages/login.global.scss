@@ -1,3 +1,5 @@
+@import "../globals.scss";
+
 .container {
     background-image: url("../../public/bg-blue.jpg");
     height: 100vh;
@@ -10,6 +12,12 @@
     }
     .footer {
       text-align: center;
+      color: $grey-dark;
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        color: $black;
+      }
     }
      
 }

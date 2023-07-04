@@ -1,0 +1,19 @@
+@import "../globals.scss";
+
+.progressBar {
+    display: flex;
+  }
+  
+  .progressBarItem {
+    width: 20px;
+    height: 4px;
+    background-color: $grey;
+    margin-right: 4px;
+  }
+  
+  .progressBarItemFilled {
+    width: 20px;
+    height: 4px;
+    background-color: $black;
+    margin-right: 4px;
+  }
