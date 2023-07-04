@@ -2,8 +2,5 @@
 @import "../../styles/pages/login.global.scss";
 
 .container {
-  @extend .container;
-  .body {
-    margin-top: -30px;
-  }
+  @extend .container; 
 }

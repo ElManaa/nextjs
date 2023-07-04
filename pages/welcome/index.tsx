@@ -9,8 +9,8 @@ function welcome() {
   const renderBody = (): ReactNode => {
     return (
       <div className={styles.body}>
-          <Link href={"/login"}><Button label="Sign up" variation="primary" ></Button></Link>
-        <Link href={"/login"}><Button label="Log in"></Button></Link>
+          <Link href={"/login"}><Button label="Signup" variation="primary" ></Button></Link>
+        <Link href={"/login"}><Button label="Login"></Button></Link>
       </div>
     );
   };
