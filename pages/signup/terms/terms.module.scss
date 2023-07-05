@@ -25,8 +25,13 @@
  
     max-height: 75%;
     overflow: auto;
- 
+
     .inputSection {
       margin: 10px auto;
+      
+      input {
+        width: 16px;
+        height: 16px;
+      }
     }
 }

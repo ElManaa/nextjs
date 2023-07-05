@@ -1,11 +1,9 @@
 import { ReactNode, useState } from "react";
 import CardPage from "@/app/components/CardPage";
 import Button from "@/app/components/Button";
-import styles from "./verification.module.scss";
+import styles from "./terms.module.scss";
 import Link from "next/link";
-import ProgressBar from "@/app/components/ProgressBar";
-import InputText from "@/app/components/InputText";
-import InputCode from "@/app/components/InputCode";
+import ProgressBar from "@/app/components/ProgressBar"; 
 
 function verificationSignUp() {
   const usernameValidator = async (value: any) => {
@@ -21,7 +19,7 @@ function verificationSignUp() {
   const renderHeader = (): ReactNode => {
     return (
       <div className={styles.header}>
-        <ProgressBar totalSteps={3} currentStep={1} />
+        <ProgressBar totalSteps={3} currentStep={2} />
       </div>
     );
   };
@@ -37,32 +35,28 @@ function verificationSignUp() {
             auctor velit justo a dui. Pellentesque vel velit eros. Aenean vel
             dui ex. Pellentesque egestas diam urna, at rutrum odio luctus ac.
             Fusce in ultrices nunc. Sed odio nulla, maximus at purus vel,
-            euismod blandit diam. Maecenas tempus sem sit amet lectus dignissim,
-            eget interdum ligula vestibulum. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Maecenas eleifend ipsum sit amet enim
-            congue, vitae convallis nisi condimentum. Nulla ullamcorper blandit
-            nisi placerat viverra. Mauris tortor nibh, convallis vehicula augue
-            quis, accumsan cursus velit. Nam sed augue lectus. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Donec lacus lorem, aliquam
-            dictum hendrerit a, posuere ac elit. Donec fermentum, dolor
-            fringilla lacinia blandit, odio eros malesuada libero, at auctor
-            velit justo a dui. Pellentesque vel velit eros. Aenean vel dui ex.
-            Pellentesque egestas diam urna, at rutrum odio luctus ac. Fusce in
-            ultrices nunc. Sed odio nulla, maximus at purus vel, euismod blandit
-            diam. Maecenas tempus sem sit amet lectus dignissim, eget interdum
-            ligula vestibulum. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Maecenas eleifend ipsum sit amet enim congue, vitae
-            convallis nisi condimentum. Nulla ullamcorper blandit nisi placerat
-            viverra. Mauris tortor nibh, convallis vehicula augue quis, accumsan
-            cursus velit. Nam sed augue lectus.
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus
+            lorem, aliquam dictum hendrerit a, posuere ac elit. Donec fermentum,
+            dolor fringilla lacinia blandit, odio eros malesuada libero, at
+            auctor velit justo a dui. Pellentesque vel velit eros. Aenean vel
+            dui ex. Pellentesque egestas diam urna, at rutrum odio luctus ac.
+            Fusce in ultrices nunc. Sed odio nulla, maximus at purus vel,
+        
           </p>
         </div>
-        <div className={styles.body}>
+        <div className={`${styles.body} mt-4`}>
           <div className={styles.inputSection}>
-            <input type="checkbox" /> I agree to The Terms & Conditions
+          <label className={styles.checkbox}> 
+              <input type="checkbox" /> I Agree to Terms & Conditions
+              <span className={styles.checkmark}></span>
+            </label> 
           </div>
           <div className={styles.inputSection}>
-            <input type="checkbox" /> I agree to Privacy Policy
+            <label className={styles.checkbox}> 
+              <input type="checkbox" /> I Agree to Privacy Policy
+              <span className={styles.checkmark}></span>
+            </label> 
           </div>
         </div>
       </>
@@ -72,11 +66,9 @@ function verificationSignUp() {
   const renderFooter = (): ReactNode => {
     return (
       <div className={styles.veriffooter + " row "}>
-        <div className="col">
-          <Button label="Back"></Button>
-        </div>
+      
         <div className="col ">
-          <Button label="Continue" variation="primary"></Button>
+         <Link href="/signup/welcome"> <Button label="Accepter" variation="primary"></Button> </Link>
         </div>
       </div>
     );
@@ -86,6 +78,7 @@ function verificationSignUp() {
     <div className={styles.container}>
       <CardPage
         title="Terms & Conditions"
+        layout="custom2"
         renderHeader={renderHeader}
         renderBody={renderBody}
         renderFooter={renderFooter}

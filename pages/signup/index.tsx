@@ -80,7 +80,7 @@ function signup() {
           isRequired={true}
         />
 
-        <Button label="Log in" variation="primary"></Button>
+        <Button label="Sign up" variation="primary"></Button>
       </div>
     );
   };
