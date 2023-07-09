@@ -1,0 +1,10 @@
+@import './globals.scss';
+
+.appLayout{
+    display: flex;
+}
+
+.content{
+    flex : 1;
+    height: 100vh;
+}

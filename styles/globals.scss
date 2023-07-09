@@ -21,8 +21,58 @@ $L : 1140px;
 $M : 720px;
 $S : 540; 
 
-;
+$base-font-size: 16px;
+ 
 .body {
   width: 100%; 
   margin: 0 auto; 
 }
+
+ 
+.vCenter {
+  display: flex;
+  align-items: center;
+}
+
+/** old scss **/ 
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vCenter {
+  display: flex;
+  align-items: center;
+}
+
+  
+.textField , .baseField {
+ 
+  color : $black; 
+  font-size: $base-font-size;
+  width: 100%;
+  padding: 9px 30px;
+  margin-bottom: 10px;
+  border: 1.53407px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15.3407px;
+  &::placeholder {
+    color: rgba(0, 0, 0, 1);
+    font-size: $base-font-size; 
+  
+  }
+  border: 2px $grey solid;
+  &:focus {
+    outline: none !important;
+    border: 2px solid $primary;
+  }
+}
+
+.primaryButton {  
+  background-color: $primary;
+  color: $white;
+  font-size: $base-font-size;
+  border-radius: 23.011px;
+  border: none;
+}
+

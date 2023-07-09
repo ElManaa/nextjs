@@ -1,0 +1,24 @@
+@import "../globals.scss";
+
+.container { 
+    background-color: white; 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 13px 23px;
+    margin-top: 5px;
+
+    input{
+        font-family: "TTNorms-Medium" ;
+    
+        width: 100%;
+        margin-left: 5px;
+        border : 0;
+        &::placeholder {
+            font-family: "TTNorms-Medium" ;
+            color: #707c97;
+          }
+        &:focus {
+            outline: 0;
+        }
+    }
+
+}   
