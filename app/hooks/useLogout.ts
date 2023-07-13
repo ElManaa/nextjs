@@ -1,4 +1,4 @@
-import axios from "@/app/api/axios" ;
+import axios from "@/pages/api/axios" ;
 import useAuth from "./useAuth";
 import { useRouter } from "next/router";
 

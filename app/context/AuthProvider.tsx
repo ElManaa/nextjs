@@ -19,15 +19,11 @@ export const AuthContext = createContext<AuthContextProps>({
 });
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [auth, setAuth] = useState<any>(null); // Replace 'any' with the appropriate type for the auth state
-  const [persist, setPersist] = useState<boolean>(
-    localStorage.getItem("persist") !== undefined
-      ? JSON.parse(localStorage.getItem("persist")!)
-      : false
-  );
+  const [auth, setAuth] = useState<any>(null); 
+  const [persist, setPersist] = useState<boolean>(true);
 
   return (
-    <AuthContext.Provider value={{ auth, setAuth, persist, setPersist }}>
+    <AuthContext.Provider value={{ auth, setAuth, persist, setPersist }}> 
       {children}
     </AuthContext.Provider>
   );

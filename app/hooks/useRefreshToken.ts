@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import axios from '@/app/api/axios';
+import axios from '@/pages/api/axios';
 import useAuth from './useAuth'; 
  
 type RefreshResponseData = {
