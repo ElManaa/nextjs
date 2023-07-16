@@ -1,3 +1,5 @@
+import { Session } from "next-auth";
+import { useSession } from "next-auth/react";
 import { createContext, useState, ReactNode } from "react";
 
 interface AuthContextProps {
@@ -5,6 +7,8 @@ interface AuthContextProps {
   setAuth: React.Dispatch<React.SetStateAction<any>>; // Replace 'any' with the appropriate type for the setAuth function
   persist: boolean;
   setPersist: React.Dispatch<React.SetStateAction<boolean>>;
+  session : Session | null,
+  status : string,
 }
 
 interface AuthProviderProps {
@@ -16,14 +20,17 @@ export const AuthContext = createContext<AuthContextProps>({
   setAuth: () => {},
   persist: false,
   setPersist: () => {},
+  session : useSession().data,
+  status : ""
 });
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [auth, setAuth] = useState<any>(null); 
   const [persist, setPersist] = useState<boolean>(true);
+  const { data: session, status } = useSession();
 
   return (
-    <AuthContext.Provider value={{ auth, setAuth, persist, setPersist }}> 
+    <AuthContext.Provider value={{ auth, setAuth, persist, setPersist , session , status }}> 
       {children}
     </AuthContext.Provider>
   );

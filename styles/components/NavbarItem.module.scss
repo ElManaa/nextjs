@@ -1,0 +1,26 @@
+@import '../../../assets/variables.scss';
+
+.container {
+    padding: 14px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid $chatx-black;
+    cursor: pointer;
+    .icon{
+        width: 30px;
+        text-align: center;
+    }
+    p {
+        margin-bottom: 0;
+        font-family: $chatx-font-regular;
+        margin-left: 5px;
+    }
+
+    &:hover {
+        background : linear-gradient(96.78deg, #7CB8F7 0%, #2A8BF2 100%);
+        p {
+            color: white;
+        }
+    }
+}

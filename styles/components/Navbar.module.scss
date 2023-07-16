@@ -1,0 +1,63 @@
+@import '../../assets/variables.scss';
+
+.aside {
+    display: inline-block;
+    height: 100vh;
+    width: 480px;
+    border-right: 1px solid $chatx-black;
+    
+}
+
+
+.header {
+    height: 87px;
+    background : $chatx-black;
+    .user { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        img {
+            width: 100px;
+            height: 57px;
+            border-radius: 50%;
+            border: 2px solid $chatx-white;
+            display: flex;
+            margin-right: 6px;
+            object-fit: cover;
+        }
+        p {
+            margin-bottom: 0;
+            display: inline;
+            font-family:'TTNorms-Regular' ;
+            display: -webkit-box;
+            color: $chatx-white;
+            font-size: 15px; 
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;  
+            line-clamp: 2; 
+            -webkit-box-orient: vertical;
+        }
+    }
+    .headerRow {
+        height: inherit;
+    }
+
+    .wallet {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px 35px;
+        p {
+            color: $chatx-white;
+            font-family: $chatx-font-medium;
+            margin-bottom: 0;
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}
