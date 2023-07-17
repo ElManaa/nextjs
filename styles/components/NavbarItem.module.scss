@@ -1,11 +1,11 @@
-@import '../../../assets/variables.scss';
+@import "../globals.scss";
 
 .container {
     padding: 14px 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid $chatx-black;
+    border-bottom: 1px solid $black;
     cursor: pointer;
     .icon{
         width: 30px;
@@ -13,7 +13,7 @@
     }
     p {
         margin-bottom: 0;
-        font-family: $chatx-font-regular;
+       // font-family: $chatx-font-regular;
         margin-left: 5px;
     }
 

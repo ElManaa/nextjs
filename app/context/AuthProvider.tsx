@@ -7,7 +7,7 @@ interface AuthContextProps {
   setAuth: React.Dispatch<React.SetStateAction<any>>; // Replace 'any' with the appropriate type for the setAuth function
   persist: boolean;
   setPersist: React.Dispatch<React.SetStateAction<boolean>>;
-  session : Session | null,
+  session : any,
   status : string,
 }
 
@@ -20,7 +20,7 @@ export const AuthContext = createContext<AuthContextProps>({
   setAuth: () => {},
   persist: false,
   setPersist: () => {},
-  session : useSession().data,
+  session : useSession() ,
   status : ""
 });
 

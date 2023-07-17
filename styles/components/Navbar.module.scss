@@ -1,17 +1,17 @@
-@import '../../assets/variables.scss';
+@import "../globals.scss";
 
 .aside {
     display: inline-block;
     height: 100vh;
     width: 480px;
-    border-right: 1px solid $chatx-black;
+    border-right: 1px solid $black;
     
 }
 
 
 .header {
     height: 87px;
-    background : $chatx-black;
+    background : $black;
     .user { 
         display: flex;
         justify-content: center;
@@ -22,7 +22,7 @@
             width: 100px;
             height: 57px;
             border-radius: 50%;
-            border: 2px solid $chatx-white;
+            border: 2px solid white;
             display: flex;
             margin-right: 6px;
             object-fit: cover;
@@ -30,9 +30,9 @@
         p {
             margin-bottom: 0;
             display: inline;
-            font-family:'TTNorms-Regular' ;
+            //font-family:'TTNorms-Regular' ;
             display: -webkit-box;
-            color: $chatx-white;
+            color: white;
             font-size: 15px; 
             width: 100%;
             overflow: hidden;
@@ -52,8 +52,8 @@
         justify-content: flex-end;
         padding: 10px 35px;
         p {
-            color: $chatx-white;
-            font-family: $chatx-font-medium;
+            color: white;
+            //font-family: $chatx-font-medium;
             margin-bottom: 0;
             svg {
                 margin-right: 5px;

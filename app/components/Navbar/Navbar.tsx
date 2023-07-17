@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import useAuth from "@/app/hooks/useAuth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";  
 import { signOut } from "next-auth/react"; 
 import { useEffect, useState } from "react"; 
 import { faWallet , faInbox , faUser , faMoneyBillTrendUp , faGear , faCircleInfo, faMoon, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
@@ -9,21 +8,21 @@ import NavbarItem from "./NavbarItem";
 
  
 export default function Navbar() {
-  const logout = signOut();
-  const {auth} = useAuth()
+  const logout = signOut;
+  
   const [avatar, setAvatar] = useState(avatarIcon)
   const [username,setUsername] =useState(false)
   const [balance,setBalance] = useState(0)
-
+ /*
   useEffect(()=> {
-    if (auth){
+  if (auth){
       console.log(auth)
       if (auth.avatar && auth.avatar.length > 0)
       setAvatar(auth.avatar)
       setUsername(auth.username)
       setBalance(auth.balance)
     }
-  },[auth])
+  },[auth]) */
 
   return (
     <aside className={styles.aside}>

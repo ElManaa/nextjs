@@ -1,0 +1,100 @@
+@import "../globals.scss";
+
+
+.container {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+    &.received {
+        justify-content: start;
+    }
+}
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text {
+    display: inline-block;
+    //font-family: "TTNorms-Regular";
+    font-size: 16px;
+    padding : 15px 24px 20px 23px;
+    line-height: 26px; 
+    letter-spacing: 1.1;
+    margin: 0 10px; 
+    max-width: 55%;  
+    border: 1px solid rgba(112, 124, 151, 0.25);  
+    box-shadow: 5px 7px 10px rgba(112, 124, 151, 0.05), 5px 15px 7px rgba(112, 124, 151, 0.05);
+    background: #FFFFFF;
+    color : $grey;
+    border-radius: 10px 10px 0px 10px;
+  
+    &.received {
+        border-radius: 0px 10px 10px 10px;
+        box-shadow: 5px 7px 10px rgba(42, 139, 242, 0.1), 5px 15px 7px rgba(42, 139, 242, 0.05), 5px 7px 10px rgba(42, 139, 242, 0.1);
+        background: linear-gradient(90.54deg, #60A9F6 0%, #2A8BF2 100%);
+        color: white;
+    }
+}
+
+.bubbleOption {
+    opacity: 0.5;
+}
+
+.options{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    svg {
+        cursor: pointer;
+    }
+
+    .popup {
+        display: none;
+        position: absolute;
+        width: fit-content;
+        right: 20px;
+        background-color: #ffffff;
+        border: 1px solid #707c97;
+        border-radius: 15px;
+        border-start-end-radius: 0;
+        width: 150px;
+        bottom: 0px;
+        //font-family: $chatx-font-light;
+        font-size: 0.8rem;
+        padding : 10px;
+       
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            li {
+                cursor: pointer;
+                list-style: none;
+            }
+        }
+
+        &.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+   
+}
+
+.refunded {
+    
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+   // font-family: $chatx-font-light;
+    font-style: italic;
+}
+
+.imgrequest {
+    
+}

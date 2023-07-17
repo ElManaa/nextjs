@@ -8,7 +8,7 @@ interface AuthProps {
 const Auth: React.FC<AuthProps> = ({ children }) => {
   const { data: session, status } = useSession();
 
-  //console.log(session?.user?.email);
+  console.log("Auth.tsx",session?.user, status );
 
   if (status === "unauthenticated") {
     return <div>UnAuthenticated</div>;

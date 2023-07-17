@@ -1,0 +1,146 @@
+@import "../../assets/variables.scss";
+
+.inputSection {
+  padding: 15px 10px;
+
+  label {
+    font-family: $chatx-font-regular;
+    margin-bottom: 7px; 
+    span {
+      font-size: 15px;
+      color: $chatx-red;
+      margin-left : 2px;
+    }
+  }
+
+  .textField {
+    @extend .baseField;
+  }
+
+  .select {
+    @extend .baseField;
+    width: 200px;
+    background-color: $chatx-white;
+  }
+
+  .textArea {
+    @extend .baseField;
+  }
+}
+
+.dateContainer { 
+    display: flex;
+    justify-content: flex-start;
+  .DateField {
+    @extend .baseField;
+    width: 115px;
+    padding: 6px 2px;
+    margin-right: 10px;
+    text-align: center;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none; 
+      margin: 0;
+    }
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+}
+
+.errorField {
+    font-family: $chatx-font-medium;
+    color : $chatx-red;
+    display: flex;
+    align-items: center;
+    span {
+        margin-right: 5px; 
+    }
+    font-size: $base-font-size * 0.9; 
+}
+
+
+.submit {
+    font-family: $chatx-font-medium;
+    border : 0 ;
+    color : $chatx-white;
+   
+    border-radius: 6px;
+    background: linear-gradient(96.78deg, #7CB8F7 0%, #2A8BF2 100%);
+    padding: 8px 32px;
+    &:disabled {
+      opacity: 0.5;
+      background: $chatx-white;
+      color: $chatx-black ;
+      border: 2px solid $chatx-black;
+    }
+}
+
+
+.valid {
+  border: 2px $chatx-green solid !important; 
+}
+ 
+.error {
+  border: 2px $chatx-red solid !important; 
+}
+
+
+
+.topcis { 
+
+  padding: 10px 15px; 
+  padding-bottom: 15px; 
+
+  h5 {
+      font-family: $chatx-font-medium;
+      color: $chatx-black;
+      margin-bottom: 15px;
+  }
+
+  p  {
+    font-family: $chatx-font-regular;
+    color: $chatx-black;
+    background-color: #f1f2f4;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-right: 15px;
+    display: inline-block;
+    svg {
+      margin-left: 10px;
+      margin-right: 5px;
+      opacity: 0.4;
+      transition: ease-in-out 0.1s;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .topcisContainer {
+    display: block; 
+  }
+
+
+}
+
+.inputTag {
+  display: flex;
+  align-items: first baseline;
+
+  input {
+    width: 50% !important;
+  }
+
+  button {
+    background-color: transparent;
+    border : 0;
+    font-family: $chatx-font-medium;
+    border: 2px solid $chatx-grey;
+    border-radius: 5000px;
+    margin-left: 10px;
+    padding : 8px 13px;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../assets/variables.scss';
+
+.container { 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 80px; 
+    border-top: 2px solid rgba($color: $chatx-grey, $alpha: 0.2);   
+    background-color: white;  
+    z-index: 2;
+}
+
+.inputMsg {
+    font-size: 16px;
+    font-family: "TTNorms-Medium" ;
+    height: 36px;
+    margin: 20px 0px;
+    border: 0;
+    width: 100%;
+    resize: none;
+  &::placeholder {
+    font-family: "TTNorms-Medium" ;
+    color: rgba(112, 124, 151, 0.7);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.options {
+  position: absolute;
+  width: 100px;
+  top: -20px;
+  justify-content: center;
+  display: flex; 
+}
+
+.imageSelected {
+  display: inline-flex;
+  background-color: $chatx-blue;
+  border-radius: 50px;
+  padding : 10px 19px; 
+  margin: 17px 0px;
+  p {
+    font-family: $chatx-font-regular;
+    margin-bottom: 0; 
+    color: $chatx-white;
+  }
+  svg {
+    cursor: pointer;
+  }
+}

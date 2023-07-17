@@ -1,16 +1,27 @@
-import React from 'react'
-import styles from '@/styles/Button.module.scss'
+import React from "react";
+import styles from "@/styles/components/Button.module.scss";
 
 type Props = {
-    label : string
-    variation? : ( "primary" | "secondary" | false ) 
-}
+  label: string;
+  variation?: "primary" | "secondary" | false;
+  clickAction?: Function;
+};
 
-const Button = ( {label , variation = false }: Props)  => { 
+const Button = ({ label, variation = false, clickAction }: Props) => {
+  const handleClick = () => {
+    if (clickAction) {
+      clickAction();
+    }
+  };
+
   return (
-    <button className={`${styles.buttonMain} ${variation && styles[variation]}`}> {label} </button>
-  )
-}
+    <button
+      className={`${styles.buttonMain} ${variation && styles[variation]}`}
+      onClick={handleClick}
+    >
+      {label}
+    </button>
+  );
+};
 
-
-export default Button
+export default Button;

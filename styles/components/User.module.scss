@@ -1,0 +1,60 @@
+@import "../globals.scss";
+
+.container {
+    margin-top: 10px; 
+}
+
+.avatarContainer {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    &.mauto {
+    margin: auto;
+    }
+    cursor: pointer;
+    
+  .avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+  }
+ 
+  &::after {
+    content : "";
+    width: 18px;
+    height: 18px;
+    background-color: $grey;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border: 3px solid #FFFFFF;
+  }
+
+  &.online {
+    &::after {
+        background-color: #5AD439;
+    }
+  }
+}
+
+.nameContainer {
+    p { 
+        //font-family: TTNorms-Medium;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black !important; 
+        margin: 0 10px;
+        span { 
+          //  font-family: TTNorms-Regular;
+            font-size: 16px;
+            color: $primary;
+            line-height: 19px;
+            display: block;
+            margin-top: 6px;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import "../globals.scss";
+
+.container { 
+   width: 100%;
+   overflow: auto;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   cursor: grab;
+   -ms-overflow-style: none;  /* Internet Explorer 10+ */
+   scrollbar-width: none; 
+   &::-webkit-scrollbar {
+    display: none; 
+   }
+}
+
+.user {
+    margin-left: 10px;
+}
